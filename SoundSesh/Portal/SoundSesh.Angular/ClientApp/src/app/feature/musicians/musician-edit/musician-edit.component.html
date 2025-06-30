@@ -1,0 +1,12 @@
+<mdb-tabset #staticTabs [vertical]="true" [buttonClass]="'md-tabs tabs-3 indigo'" [contentClass]="'card'">
+  <mdb-tab id="automation-profileMenu" heading="Profile">
+    <studio-portal-musician-profile [musician]='musician'></studio-portal-musician-profile>
+  </mdb-tab>
+  <mdb-tab id="automation-detailMenu" heading="Details">
+    <studio-portal-musician-details [musician]='musician'></studio-portal-musician-details>
+  </mdb-tab>
+  <mdb-tab id="automation-detailMenu" heading="Web Links">
+    <studio-portal-weblinks [musician]='musician'></studio-portal-weblinks>
+  </mdb-tab>
+
+</mdb-tabset>

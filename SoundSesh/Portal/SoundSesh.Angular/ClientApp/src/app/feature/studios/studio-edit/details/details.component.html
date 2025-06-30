@@ -1,0 +1,55 @@
+<div *ngIf='studio'>
+  <div id="studioEdit" class="row justify-content-center">
+    <div class="col-md-9 text-center">
+      <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <h1 class="h3 mb-3 font-weight-normal"></h1>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <studio-portal-select [api]='"skilllevel"' [key]='"skilllevel"' [selectedValues]='studio.skilllevel' [placeholder]='"Select your Skill Levels"'>
+              </studio-portal-select>
+              <studio-portal-spinner [spinnerName]="'newtonsCradle'"></studio-portal-spinner>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <studio-portal-select [api]='"genre"' [key]='"genre"' [selectedValues]='studio.genres' [multiple]='true' [placeholder]='"Select your Genres"'>
+              </studio-portal-select>
+              <studio-portal-spinner [spinnerName]="'newtonsCradle'"></studio-portal-spinner>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <studio-portal-select [api]='"amenity"' [key]='"amenity"' [selectedValues]='studio.amenities' [multiple]='true' [placeholder]='"Select your Amenities"'>
+                </studio-portal-select>
+                <studio-portal-spinner [spinnerName]="'newtonsCradle'"></studio-portal-spinner>
+              </div>
+            </div>
+          </div>
+        <div class="form-group">
+          <input type="text" id="about" name="about" [(ngModel)]="studio.about" class="form-control"
+            placeholder="About Us" required autoFocus>
+        </div>
+        <div class="form-group">
+          <input type="text" id="rules" name="rules" [(ngModel)]="studio.rules" class="form-control" placeholder="Rules"
+            required autoFocus>
+        </div>
+        <div class="form-group">
+          <input type="text" id="cancellation" name="cancellation" [(ngModel)]="studio.cancellationpolicy"
+            class="form-control" placeholder="Cancellation Policy" required autoFocus>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+          <!--[disabled]="!f.form.valid"-->
+          Save</button>
+          
+        <div *ngIf="error" class="alert alert-danger mt-3" role="alert">
+          <strong>Oops!</strong> {{error}}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div *ngIf='studio'>
+  <div id="studioEdit" class="row justify-content-center">
+    <div class="col-md-11 text-center">
+      <form (ngSubmit)="onSubmit()">
+          <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-2">Open?</div>
+              <div class="col-md-3"></div>
+              <div class="col-md-3"></div>
+            </div>
+        <div class="form-group">
+          <studio-portal-hours-of-operation-selection [day]='"Sunday"' [start]='getOpenTime("Sunday")'
+            [end]='getCloseTime("Sunday")' [open]='isOpen("Sunday")'></studio-portal-hours-of-operation-selection>
+          <studio-portal-hours-of-operation-selection [day]='"Monday"' [start]='getOpenTime("Monday")'
+            [end]='getCloseTime("Monday")' [open]='isOpen("Monday")'></studio-portal-hours-of-operation-selection>
+          <studio-portal-hours-of-operation-selection [day]='"Tuesday"' [start]='getOpenTime("Tuesday")'
+            [end]='getCloseTime("Tuesday")' [open]='isOpen("Tuesday")'></studio-portal-hours-of-operation-selection>
+          <studio-portal-hours-of-operation-selection [day]='"Wednesday"' [start]='getOpenTime("Wednesday")'
+            [end]='getCloseTime("Wednesday")' [open]='isOpen("Wednesday")'></studio-portal-hours-of-operation-selection>
+          <studio-portal-hours-of-operation-selection [day]='"Thursday"' [start]='getOpenTime("Thursday")'
+            [end]='getCloseTime("Thursday")' [open]='isOpen("Thursday")'></studio-portal-hours-of-operation-selection>
+          <studio-portal-hours-of-operation-selection [day]='"Friday"' [start]='getOpenTime("Friday")'
+            [end]='getCloseTime("Friday")' [open]='isOpen("Friday")'></studio-portal-hours-of-operation-selection>
+          <studio-portal-hours-of-operation-selection [day]='"Saturday"' [start]='getOpenTime("Saturday")'
+            [end]='getCloseTime("Saturday")' [open]='isOpen("Saturday")'></studio-portal-hours-of-operation-selection>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+          <!--[disabled]="!f.form.valid"-->
+          Save</button>
+
+        <div *ngIf="error" class="alert alert-danger mt-3" role="alert">
+          <strong>Oops!</strong> {{error}}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

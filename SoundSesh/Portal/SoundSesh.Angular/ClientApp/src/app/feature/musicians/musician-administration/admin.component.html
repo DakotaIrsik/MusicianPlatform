@@ -1,0 +1,29 @@
+  <!-- Nav Tabs -->
+  <mdb-tabset #staticTabs [vertical]="true" [buttonClass]="'md-tabs indigo'" [contentClass]="'card'">
+    <!--Panel 1-->
+    <mdb-tab id="automation-diagnosticsMenu" heading="Diagnostics">
+      <div class="row">
+        <div class="col-12">
+          <br>
+          <studio-portal-diagnostics></studio-portal-diagnostics>
+        </div>
+      </div>
+    </mdb-tab>
+    <mdb-tab id="automation-FeatureRequestsMenu" heading="Feature Requests">
+      <div class="row">
+        <div class="col-12">
+          <br>
+          <studio-portal-feature-requests></studio-portal-feature-requests>
+        </div>
+      </div>
+    </mdb-tab>
+
+    <mdb-tab id="automation-chat" heading="Chat">
+      <div class="row">
+        <div class="col-12">
+          <br>
+          <studio-portal-chat></studio-portal-chat>
+        </div>
+      </div>
+    </mdb-tab>
+  </mdb-tabset>

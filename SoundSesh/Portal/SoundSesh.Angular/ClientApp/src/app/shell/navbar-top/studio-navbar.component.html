@@ -1,0 +1,41 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark" *ngIf="!isAuthenticated">
+  <mdb-navbar-brand>
+      <a class="navbar-brand" href="/Studios">
+         {{environment.suite}} - {{application}} <ng-container *ngIf='!environment.isProduction'>({{environment.environmentName}})</ng-container>
+        </a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class='nav-link' id='automation-login' routerLinkActive='active' (click)="login()">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id='automation-signup' routerLinkActive='active' [routerLink]="['/Studios/register']">Signup</a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
+
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark" *ngIf="isAuthenticated">
+    <mdb-navbar-brand>
+        <a class="navbar-brand" href="/Studios">
+          {{environment.suite}} - {{application}} <ng-container *ngIf='!environment.isProduction'>({{environment.environmentName}})</ng-container>
+        </a>
+      </mdb-navbar-brand>
+  <links>
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" id='automation-search' routerLinkActive='active' [routerLink]="['/Studios/search']">Search</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id='automation-manage' routerLinkActive='active' [routerLink]="['/Studios/manage']">Manage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id='automation-admin' routerLinkActive='active' [routerLink]="['/Studios/administration']">Administration</a>
+      </li>
+      <li class="nav-item">
+        <a class='nav-link' (click)="signout()" href="/Studios">Signout {{authService.name}}</a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>

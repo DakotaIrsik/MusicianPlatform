@@ -1,0 +1,62 @@
+<div class="row text-center">
+  <div class="col-md-2 my-auto"><label>Name</label></div>
+  <div class="col-md-2 my-auto"><label>Maximum Occupancy</label></div>
+  <div class="col-md-2 my-auto"><label>Price / Hour</label></div>
+  <div class="col-md-3 my-auto"><label>Terms</label></div>
+  <div class="col-md-3 my-auto"></div>
+</div>
+<div *ngFor="let staticRoom of studio.activerooms">
+  <div class="row text-center">
+    <div class="col-md-2 my-auto"><label>{{staticRoom.name}}</label></div>
+    <div class="col-md-2 my-auto"><label>{{staticRoom.occupancyMaximum}}</label></div>
+    <div class="col-md-2 my-auto"><label>${{staticRoom.pricePerHour}}</label></div>
+    <div class="col-md-3 my-auto"><label>{{staticRoom.terms}}</label></div>
+    <div class="col-md-3 my-auto"><button class='btn btn-danger' (click)="deleteRoom(staticRoom.id)">Delete</button>
+    </div>
+  </div>
+</div>
+<hr>
+<div id="roomAdd" class="row justify-content-center">
+  <div class="col-md-9 text-center">
+    <form #f="ngForm" (ngSubmit)="addRoom(); f.reset()">
+      <h1 class="h3 mb-3 font-weight-normal"></h1>
+      <div class="form-group">
+        <input type="text" id="studioEditRoomName" name="name" class="form-control" placeholder="Name"
+              [(ngModel)]="room.name"
+              autoFocus
+              required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="maximumOccupancy" name="maximumOccupancy" class="form-control" placeholder="Maximum Occupancy"
+              [(ngModel)]="room.occupancyMaximum"  
+              #maximumOccupancy='ngModel'  
+              [textMask]="{mask: wholeNumbers(3)}"
+              required
+              minValue="1"
+              maxValue="100">
+        <studio-portal-validation-error [validatedControl]='maximumOccupancy'></studio-portal-validation-error>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend2">$</span>
+          </div>
+          <input type="text" id="pricePerHour" name="pricePerHour" class="form-control" placeholder="Price per hour" aria-describedby="inputGroupPrepend2"
+                [(ngModel)]="room.pricePerHour"
+                #pricePerHour='ngModel'
+                [textMask]="{mask: dollarsWithCents(4)}"
+                required  
+                minValue="1" 
+                maxValue="1000">
+        </div>
+        <studio-portal-validation-error [validatedControl]='pricePerHour'></studio-portal-validation-error>
+      </div>
+      <div class="form-group">
+        <input type="text" id="terms" name="terms" class="form-control" placeholder="Terms"
+              [(ngModel)]="room.terms"
+              required>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" [disabled]="!f.form.valid" type="submit">Save</button>
+    </form>
+  </div>
+</div>

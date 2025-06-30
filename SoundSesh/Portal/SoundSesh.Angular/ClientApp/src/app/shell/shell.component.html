@@ -1,0 +1,14 @@
+<ng-container *ngIf='application == "Studios"'>
+  <portal-studio-navbar></portal-studio-navbar>
+</ng-container>
+<ng-container *ngIf='application == "Musicians"'>
+  <portal-musician-navbar></portal-musician-navbar>
+</ng-container>
+<main>
+  <div class="container my-auto">
+    <!-- <ng-scrollbar #shellScrollbar> -->
+    <router-outlet></router-outlet>
+    <!--  </ng-scrollbar> -->
+  </div>
+</main>
+<studio-portal-footer></studio-portal-footer>

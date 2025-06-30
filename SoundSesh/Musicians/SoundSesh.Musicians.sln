@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common Scripts", "Common Scripts", "{80AB8DFF-8590-45B2-B203-427C68E8C17D}"
+	ProjectSection(SolutionItems) = preProject
+		Update-SubModule.ps1 = Update-SubModule.ps1
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoundSesh.Common", "SoundSesh.Common\SoundSesh.Common.csproj", "{A7B1CAE3-FEF2-41E8-819C-DCAD98AA4386}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoundSesh.Musicians.API", "SoundSesh.Musicians.API\SoundSesh.Musicians.API.csproj", "{F16AA8FB-3393-4836-9196-1CF08513C002}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoundSesh.Musicians.Core", "SoundSesh.Musicians.Core\SoundSesh.Musicians.Core.csproj", "{63862F7C-05EF-4FEC-9751-7CB989B4606A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoundSesh.Musicians.Entities", "SoundSesh.Musicians.Entities\SoundSesh.Musicians.Entities.csproj", "{505D0D3C-D4ED-4D23-8B07-84B938B9E922}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7B1CAE3-FEF2-41E8-819C-DCAD98AA4386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B1CAE3-FEF2-41E8-819C-DCAD98AA4386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B1CAE3-FEF2-41E8-819C-DCAD98AA4386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B1CAE3-FEF2-41E8-819C-DCAD98AA4386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F16AA8FB-3393-4836-9196-1CF08513C002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16AA8FB-3393-4836-9196-1CF08513C002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16AA8FB-3393-4836-9196-1CF08513C002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16AA8FB-3393-4836-9196-1CF08513C002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63862F7C-05EF-4FEC-9751-7CB989B4606A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63862F7C-05EF-4FEC-9751-7CB989B4606A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63862F7C-05EF-4FEC-9751-7CB989B4606A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63862F7C-05EF-4FEC-9751-7CB989B4606A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{505D0D3C-D4ED-4D23-8B07-84B938B9E922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505D0D3C-D4ED-4D23-8B07-84B938B9E922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505D0D3C-D4ED-4D23-8B07-84B938B9E922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505D0D3C-D4ED-4D23-8B07-84B938B9E922}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3CB3E88-A0BC-4EAB-9C35-979A1B4DC92E}
+	EndGlobalSection
+EndGlobal

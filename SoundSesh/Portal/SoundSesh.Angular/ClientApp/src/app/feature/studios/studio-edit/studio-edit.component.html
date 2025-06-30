@@ -1,0 +1,28 @@
+<div class="row justify-content-center">
+    <button class='btn btn-danger' (click)="delete(studio.id)">Delete Studio</button>
+    <button class='btn btn-primary' (click)="openModal(202)">Manage Payment Methods</button>
+    <button class='btn btn-primary' (click)="openModal(159)">Manage Studio News</button>
+</div>
+<!-- Nav Tabs -->
+<mdb-tabset #staticTabs [vertical]="true" [buttonClass]="'md-tabs tabs-3 indigo'" [contentClass]="'card'"
+  *ngIf='studio'>
+  <!--Panel 1-->
+  <mdb-tab id="automation-profileMenu" heading="Profile">
+    <studio-portal-profile [studio]='studio'></studio-portal-profile>
+  </mdb-tab>
+  <mdb-tab id="automation-profileMenu" heading="Details">
+    <studio-portal-details [studio]='studio'></studio-portal-details>
+  </mdb-tab>
+  <mdb-tab id="automation-hoursMenu" heading="Hours">
+    <studio-portal-hours [studio]='studio'></studio-portal-hours>
+  </mdb-tab>
+  <mdb-tab id="automation-imagesMenu" heading="Images">
+    <studio-portal-images [studio]='studio'></studio-portal-images>
+  </mdb-tab>
+  <mdb-tab id="automation-roomsMenu" heading="Rooms">
+    <studio-portal-rooms [studio]='studio'></studio-portal-rooms>
+  </mdb-tab>
+  <mdb-tab id="automation-roomsMenu" heading="Web Links">
+    <studio-portal-weblinks [studio]='studio'></studio-portal-weblinks>
+  </mdb-tab>
+</mdb-tabset>

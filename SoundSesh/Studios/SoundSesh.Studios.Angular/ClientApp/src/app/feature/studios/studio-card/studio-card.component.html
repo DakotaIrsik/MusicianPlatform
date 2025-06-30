@@ -1,0 +1,28 @@
+  <mdb-card cascade="true" wider="true">
+    <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+      <mdb-card-img [src]="studio.defaultprofileimage" alt="Card image cap"></mdb-card-img>
+      <a [routerLink]="['/studios', studio.id]">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+    <mdb-card-body cascade="true" class="text-center">
+      <h4 class="card-title">
+        <strong>{{studio.name}}</strong>
+      </h4>
+      <h5 class="indigo-text">
+        <strong>{{studio.city}}, {{studio.state}}</strong>
+      </h5>
+      <mdb-card-text>
+        {{studio.amenities}}
+      </mdb-card-text>
+      <a type="button" class="btn-floating btn-small btn-fb waves-light" mdbWavesEffect>
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a type="button" class="btn-floating btn-small btn-tw waves-light" mdbWavesEffect>
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a type="button" class="btn-floating btn-small btn-dribbble waves-light" mdbWavesEffect>
+        <i class="fab fa-dribbble"></i>
+      </a>
+    </mdb-card-body>
+  </mdb-card>

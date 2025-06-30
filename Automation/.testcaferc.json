@@ -1,0 +1,29 @@
+{
+    "browsers": "chrome",
+    "src": "Scripts",
+
+    "reporter": {
+        "name": "html",
+        "output": "./Artifacts/Reports/report.html"
+    },
+
+    "screenshotPath": "./Artifacts/Screenshots/", 
+    "screenshotPathPattern": "${DATE}_${TIME}/test-${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.png",
+    "takeScreenshotsOnFails": true,
+
+    "videoPath": "./Artifacts/Videos/",
+
+    "videoOptions": {
+        "failedOnly": true,
+        "pathPattern": "${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.mp4"
+    },
+
+    "videoEncodingOptions": {
+        "r": 20,
+        "aspect": "16:9"
+    },
+
+    "quarantineMode": false,
+    "skipUncaughtErrors": false,
+    "skipJsErrors": true
+}

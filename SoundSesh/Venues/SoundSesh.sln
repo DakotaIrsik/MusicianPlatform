@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoundSesh.Common", "SoundSesh.Common\SoundSesh.Common.csproj", "{2CFA7E23-CAE6-4272-BFB0-08F6DD238A63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoundSesh.Venues.Entities", "SoundSesh.Venues.Entities\SoundSesh.Venues.Entities.csproj", "{D8641559-41BB-4345-AB36-1C9049468082}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoundSesh.Venues.Core", "SoundSesh.Venues.Core\SoundSesh.Venues.Core.csproj", "{33F7EA85-18D1-4142-AE86-1C75CC925675}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoundSesh.Venues.Core.Tests", "SoundSesh.Venues.Core.Tests\SoundSesh.Venues.Core.Tests.csproj", "{1752A6BC-DEEB-49DC-8C79-2896B832C735}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoundSesh.Venues.API", "SoundSesh.Venues.API\SoundSesh.Venues.API.csproj", "{2F42FF07-92B9-4E3C-B820-28DA553564F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CFA7E23-CAE6-4272-BFB0-08F6DD238A63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFA7E23-CAE6-4272-BFB0-08F6DD238A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFA7E23-CAE6-4272-BFB0-08F6DD238A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFA7E23-CAE6-4272-BFB0-08F6DD238A63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8641559-41BB-4345-AB36-1C9049468082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8641559-41BB-4345-AB36-1C9049468082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8641559-41BB-4345-AB36-1C9049468082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8641559-41BB-4345-AB36-1C9049468082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33F7EA85-18D1-4142-AE86-1C75CC925675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33F7EA85-18D1-4142-AE86-1C75CC925675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33F7EA85-18D1-4142-AE86-1C75CC925675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33F7EA85-18D1-4142-AE86-1C75CC925675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1752A6BC-DEEB-49DC-8C79-2896B832C735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1752A6BC-DEEB-49DC-8C79-2896B832C735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1752A6BC-DEEB-49DC-8C79-2896B832C735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1752A6BC-DEEB-49DC-8C79-2896B832C735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F42FF07-92B9-4E3C-B820-28DA553564F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F42FF07-92B9-4E3C-B820-28DA553564F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F42FF07-92B9-4E3C-B820-28DA553564F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F42FF07-92B9-4E3C-B820-28DA553564F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3CB3E88-A0BC-4EAB-9C35-979A1B4DC92E}
+	EndGlobalSection
+EndGlobal

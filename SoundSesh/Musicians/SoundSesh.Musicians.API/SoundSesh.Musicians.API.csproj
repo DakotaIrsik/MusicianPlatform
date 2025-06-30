@@ -1,0 +1,320 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>SoundSesh.Musicians.API</AssemblyName>
+    <RootNamespace>SoundSesh.Studios.API</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.Development.json" />
+    <Content Remove="appsettings.Production.json" />
+    <Content Remove="appsettings.QA.json" />
+    <Content Remove="Data\amenityData.json" />
+    <Content Remove="Data\equipmentData.json" />
+    <Content Remove="Data\studioData.json" />
+    <Content Remove="web.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Data\images\0099c40b-ffec-49a8-805a-0549ec4fb1bc.jpg" />
+    <None Remove="Data\images\066c3f66-183b-4598-bc75-14e7d3d596de.jpg" />
+    <None Remove="Data\images\0a0caa83-14f9-4daa-bf0a-88949e3c9483.jpg" />
+    <None Remove="Data\images\0bfc9cc5-1122-4557-a4c2-90d6b1970ba8.jpg" />
+    <None Remove="Data\images\0e85a472-4cb4-484f-96e1-d0074f93a5df.jpg" />
+    <None Remove="Data\images\0f36c326-eb54-4d19-b29b-de6f7a38f510.jpg" />
+    <None Remove="Data\images\158e356a-33f0-4e24-8fd1-74cf0804073d.jpg" />
+    <None Remove="Data\images\22fee5b8-6f54-4f12-84ee-d272f4407a29.jpg" />
+    <None Remove="Data\images\231984d6-1949-4642-b531-d353ce45fde6.jpg" />
+    <None Remove="Data\images\258a75ba-e1ba-42a9-9b89-a547142848b3.jpg" />
+    <None Remove="Data\images\2ec32a10-21ec-44a7-905b-1713c245b790.jpg" />
+    <None Remove="Data\images\2ef40e47-4bfd-47fa-95c3-bccc9317ece6.jpg" />
+    <None Remove="Data\images\31cf20b9-7621-4b38-934c-3e1a9c79927f.jpg" />
+    <None Remove="Data\images\36c07bfd-fce4-4491-91b3-77050dfb5879.jpg" />
+    <None Remove="Data\images\39aeb387-12c3-4fd1-b226-5a55c66081e9.jpg" />
+    <None Remove="Data\images\3c59042b-994b-4718-93ef-6b9c0fca39cd.jpg" />
+    <None Remove="Data\images\3d3e3cf5-1dbf-454c-b9a2-b68dbb44b3a9.jpg" />
+    <None Remove="Data\images\3da5cb22-d65d-48e1-b3ec-002c479774aa.jpg" />
+    <None Remove="Data\images\45b275c4-5f55-4e76-a309-5e47cd24bc81.jpg" />
+    <None Remove="Data\images\4891d9b3-f203-49b7-b2e9-9d80fea70b28.jpg" />
+    <None Remove="Data\images\4eed1f0f-812c-4557-98ac-cdd6dbfdbada.jpg" />
+    <None Remove="Data\images\50bbcf3d-be6d-4086-b7a6-8a3e08d3d635.jpg" />
+    <None Remove="Data\images\5239a1a5-7000-454f-9a6b-e94caacd15a3.jpg" />
+    <None Remove="Data\images\5262f146-d0c6-4913-8e1e-f0cedf6458a3.jpg" />
+    <None Remove="Data\images\528ed111-a33e-4efc-97e7-58e1b2724d7a.jpg" />
+    <None Remove="Data\images\54bde43d-612f-4cdb-89c6-cc55e2a5c889.jpg" />
+    <None Remove="Data\images\561cb1b8-4dca-440b-a78c-826be5311513.jpg" />
+    <None Remove="Data\images\62d54433-e29d-42c7-80ec-c0947c0e6b8c.jpg" />
+    <None Remove="Data\images\64c48874-5a0a-4806-bfad-82330bf9cc63.jpg" />
+    <None Remove="Data\images\64ff1dc9-a198-4fb5-97bb-4971f4d2cc85.jpg" />
+    <None Remove="Data\images\6689ccf2-88e2-45b4-aa40-a79ce34542b2.jpg" />
+    <None Remove="Data\images\66e02b73-14ed-4215-b934-82111dbaf545.jpg" />
+    <None Remove="Data\images\685e1c16-b5d2-4f98-b031-ea8ba9c72300.jpg" />
+    <None Remove="Data\images\6aff3db9-54ca-4fc6-8b19-92dc3033cb0c.jpg" />
+    <None Remove="Data\images\6cf377cb-92b4-4311-9d87-d75f9dfc9d52.jpg" />
+    <None Remove="Data\images\6e707e4a-ead1-4c17-917b-13773301ed75.jpg" />
+    <None Remove="Data\images\6fa32d6a-81c1-41ba-b676-517abfd09062.jpg" />
+    <None Remove="Data\images\8551a839-89e4-4d05-9c3f-2355005587e6.jpg" />
+    <None Remove="Data\images\859e678e-925b-48a7-a2e4-009933ab3476.jpg" />
+    <None Remove="Data\images\866d0a44-c7e3-4a89-9c37-e8bab4173843.jpg" />
+    <None Remove="Data\images\8f4ef2ea-e5f9-441f-9c47-f5ba3c12f230.jpg" />
+    <None Remove="Data\images\8fb92cc6-d6a3-4342-bdf0-99861efd8ba3.jpg" />
+    <None Remove="Data\images\9009bf29-e59a-4629-963b-ca92b330f293.jpg" />
+    <None Remove="Data\images\9c498a32-cbff-47e5-8346-0c912f5a8913.jpg" />
+    <None Remove="Data\images\a187c6d6-a4e6-42d2-99ed-b1787791fdc8.jpg" />
+    <None Remove="Data\images\a1cf2e9e-099b-4f85-a62a-c99daa001b09.jpg" />
+    <None Remove="Data\images\a47eab55-bc9a-442d-8831-46032d09ea5d.jpg" />
+    <None Remove="Data\images\acbf1494-55ca-413a-b715-a90d5dd37889.jpg" />
+    <None Remove="Data\images\aee27ca7-d1aa-4e98-8710-49b60e79c0bf.jpg" />
+    <None Remove="Data\images\b80ff77e-46cf-4055-a7e5-a7f4a970f7a3.jpg" />
+    <None Remove="Data\images\bab62c13-321d-43ef-917f-5f30dfbf89b3.jpg" />
+    <None Remove="Data\images\bf41f645-a23a-462b-b1ae-f4290525eda4.jpg" />
+    <None Remove="Data\images\c6e60f9a-3305-4d78-98fe-2e36195e333a.jpg" />
+    <None Remove="Data\images\d2d38356-94b3-40c3-a250-08c6c4c84e00.jpg" />
+    <None Remove="Data\images\d38b6ec0-3591-4ff4-8417-ad68047db423.jpg" />
+    <None Remove="Data\images\daf9516d-360c-4d56-83de-8dfb07503149.jpg" />
+    <None Remove="Data\images\dc7a52ed-98cf-48cf-9815-d7520aeff700.jpg" />
+    <None Remove="Data\images\de777c99-4ddd-4921-97e9-1e24d3e366dc.jpg" />
+    <None Remove="Data\images\e809a82d-7caa-45d4-89b7-398b534146e3.jpg" />
+    <None Remove="Data\images\f03cdcb6-b739-40fb-bc28-c45e32c5090a.jpg" />
+    <None Remove="Data\images\f94ee48c-95b9-47ce-aed2-16637a0cc22a.jpg" />
+    <None Remove="Data\images\fd6a23bc-df8f-47ad-a158-ec63f919663a.jpg" />
+    <None Remove="Data\stock-images\stock-profile.jpg" />
+    <None Remove="Helpers\reseedStudiosLocal.ps1" />
+    <None Remove="Helpers\reseedStudiosQA.ps1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="appsettings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="appsettings.Production.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="appsettings.QA.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\equipmentData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(1).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(10).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(11).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(12).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(13).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(14).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(15).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(16).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(17).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(18).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(19).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(2).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(20).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(21).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(22).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(23).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(24).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(25).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(26).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(27).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(28).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(29).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(3).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(30).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(31).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(32).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(33).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(34).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(35).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(36).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(37).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(38).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(39).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(4).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(40).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(41).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(42).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(43).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(44).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(45).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(46).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(47).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(48).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(49).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(5).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(50).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(51).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(52).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(53).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(54).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(55).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(56).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(57).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(58).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(59).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(6).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(60).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(61).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(62).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(7).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(8).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\images\sample(9).jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\amenityData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\stock-images\stock-profile.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\studioData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\reseedStudiosQA.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\reseedStudiosLocal.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="refit" Version="4.7.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SoundSesh.Musicians.Core\SoundSesh.Musicians.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,86 @@
+<mdb-tabset #staticTabs [vertical]="false" [buttonClass]="'md-tabs tabs-3 indigo'" [contentClass]="'card'">
+  <mdb-tab id="automation-profileImageMenu" heading="Profile">
+    <div *ngIf="studio">
+      <div class="row">
+        <div *ngFor="let profileImage of studio.activeapplicationfiles">
+          <div *ngIf="profileImage.fileType === 'image' && profileImage.subType === 'profile'">
+            <div class="col-md-2">
+              <img [src]="profileImage.url" style="height: 100px;" />
+            </div>
+            <div class="col-md-10">
+              <button class='btn btn-danger' *ngIf="profileImage.isActive"
+                (click)="flipImageActivation(profileImage.id)">Delete</button>
+              <button class='btn btn-primary' *ngIf="!profileImage.isDefault"
+                (click)="makeDefault(profileImage.id, 'profile')">Make Default</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form #f="ngForm" (ngSubmit)="uploadImage()">
+      <h1 class="h3 mb-3 font-weight-normal"></h1>
+      <div class="form-group">
+        <studio-portal-file-upload [subType]='"profile"' [fileType]='"image"'></studio-portal-file-upload>
+      </div>
+      <div class="row justify-content-center">
+        <div *ngIf='!studio.defaultprofileimage'>
+          <mdb-checkbox [checked]='isDefaultProfileUpload' (change)="uploadProfileImageAsDefault($event)"
+            disabled="disabled">Default?</mdb-checkbox>
+        </div>
+        <div *ngIf='studio.defaultprofileimage'>
+          <mdb-checkbox [checked]='isDefaultProfileUpload' (change)="uploadProfileImageAsDefault($event)">Default?
+          </mdb-checkbox>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <button class='row btn btn-primary' *ngIf="file" (click)="openModal(310)">Crop</button>
+      </div>
+      <div class="row justify-content-center">
+        <button class="row btn btn-primary" type="submit" [disabled]="!f.form.valid">Save Profile Image</button>
+      </div>
+    </form>
+
+  </mdb-tab>
+  <mdb-tab id="automation-bannerImageMenu" heading="Banner">
+    <div *ngIf="studio">
+      <div class="row">
+        <div *ngFor="let bannerImage of studio.activeapplicationfiles">
+          <div *ngIf="bannerImage.fileType === 'image' && bannerImage.subType === 'banner'">
+            <div class="col-md-2">
+              <img [src]="bannerImage.url" style="height: 100px;" />
+            </div>
+            <div class="col-md-10">
+              <button class='btn btn-danger' *ngIf="bannerImage.isActive"
+                (click)="flipImageActivation(bannerImage.id)">Delete</button>
+              <button class='btn btn-primary' *ngIf="!bannerImage.isDefault"
+                (click)="makeDefault(bannerImage.id, 'banner')">Make Default</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="uploadImage()">
+        <h1 class="h3 mb-3 font-weight-normal"></h1>
+        <div class="form-group">
+          <studio-portal-file-upload [subType]='"banner"' [fileType]='"image"'></studio-portal-file-upload>
+        </div>
+        <div class="row justify-content-center">
+          <div *ngIf='!studio.defaultbannerimage'>
+            <mdb-checkbox [checked]='isDefaultBannerUpload' (change)="uploadBannerImageAsDefault($event)"
+              disabled="disabled">Default?</mdb-checkbox>
+          </div>
+          <div *ngIf='studio.defaultbannerimage'>
+            <mdb-checkbox [checked]='isDefaultBannerUpload' (change)="uploadBannerImageAsDefault($event)">Default?
+            </mdb-checkbox>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <button class='row btn btn-primary' (click)="openModal(310)">Crop</button>
+        </div>
+        <div class="row justify-content-center">
+          <button class="row btn btn-primary" type="submit" [disabled]="!f.form.valid">Save Banner Image</button>
+        </div>
+      </form>
+  </mdb-tab>
+</mdb-tabset>

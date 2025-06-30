@@ -1,0 +1,94 @@
+<div class="justify-content-center text-center">
+  <div *ngIf="editable">
+      <a [routerLink]="['edit']">
+        <button class='btn btn-primary'>Edit</button>
+      </a>
+    <button class='btn btn-primary' (click)="openModal(134)">Manage Bookings</button>
+  </div>
+
+  <div *ngIf='studio'>
+      <img [src]='studio.defaultprofileimage' /><br />
+    <button *ngIf="!editable" class='btn btn-primary' (click)="openModal(173)">Write Review</button>
+    <button *ngIf="!editable" class='btn btn-primary' (click)="openModal(132)">Book this Studio</button>
+
+    <div style="background-color: white">
+      <div class="row">
+        <label class="col-md-6">Name</label>
+        <label class="col-md-6">{{studio.name}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-6">Phone Number</label>
+        <label class="col-md-6">{{studio.phonenumber}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-6">Address 1</label>
+        <label class="col-md-6">{{studio.address1}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-6">Address 2</label>
+        <label class="col-md-6">{{studio.address2}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-6">City</label>
+        <label class="col-md-6">{{studio.city}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-6">State</label>
+        <label class="col-md-6">{{studio.state}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-6">ZipCode</label>
+        <label class="col-md-6">{{studio.zipcode}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-6">Amenities</label>
+        <div class="col-md-6">
+          <div *ngFor="let amenity of studio.amenities">
+            <label>{{amenity}}</label>
+            <br />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <label class="col-md-6">Rules</label>
+        <label class="col-md-6">{{studio.rules}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-6">About</label>
+        <label class="col-md-6">{{studio.about}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-6">Audio Link</label>
+        <a class="col-md-6" href="{{studio.audiocliplink}}" target="_blank">{{studio.audiocliplink}}</a>
+      </div>
+      <div class="row">
+        <label class="col-md-6">Website Link</label>
+        <a class="col-md-6" href="{{studio.websitelink}}" target="_blank">{{studio.websitelink}}</a>
+      </div>
+      <div class="row">
+        <label class="col-md-6">Cancellation Policy</label>
+        <label class="col-md-6">{{studio.cancellationpolicy}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-6">Skill Level</label>
+        <label class="col-md-6">{{studio.skilllevel}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-6">Genres</label>
+        <div class="col-md-6">
+          <div *ngFor="let genre of studio.genres">
+            <label>{{genre}}</label>
+            <br />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <label class="col-md-6">Hours of Operation</label>
+        <div class="col-md-6">
+          <studio-portal-hours-of-operation-view [hoursOfOperation]='studio.hoursofoperation'>test
+          </studio-portal-hours-of-operation-view>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

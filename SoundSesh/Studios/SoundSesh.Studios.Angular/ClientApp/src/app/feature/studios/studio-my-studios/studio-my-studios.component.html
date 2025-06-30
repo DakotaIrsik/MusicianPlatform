@@ -1,0 +1,21 @@
+<div class="content-view-md text-center">
+  <div *ngIf="studios.length === 0">
+    <h1 class='white-text'>What are you waiting for?</h1>
+    <button class="btn btn-lg btn-primary" (click)="goToAddStudio()">Get Started</button>
+  </div>
+
+  <div id="search-results" class="text-center row">
+    <ng-scrollbar class='darker' #searchResultScrollBar>
+      <div class="col-md-12">
+        <div class="card-deck">
+          <div id="center" style="position:fixed;top:50%;left:50%">
+            <studio-portal-spinner [spinnerName]="'newtonsCradle'"></studio-portal-spinner>
+          </div>
+          <div class="col-md-4" *ngFor='let studio of studios'>
+            <studio-portal-studio-card [studio]='studio'></studio-portal-studio-card>
+          </div>
+        </div>
+      </div>
+    </ng-scrollbar>
+  </div>
+</div>

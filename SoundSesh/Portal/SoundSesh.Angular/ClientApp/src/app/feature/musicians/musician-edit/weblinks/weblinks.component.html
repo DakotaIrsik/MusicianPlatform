@@ -1,0 +1,26 @@
+<div *ngIf='musician'>
+  <div id="musicianEdit" class="row justify-content-center">
+    <div class="col-md-9 text-center  my-auto">
+      <form style='padding: 0' [formGroup]="myForm" (ngSubmit)="onSubmit($event)">
+      <div class="form-group" *ngFor='let socialmedia of socialMedias'>
+        <div class="row">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend1">https://</span>
+            </div>
+            <input type="text" id="socialmedia" class="form-control socialMedias" placeholder="{{socialmedia.name}}"
+              aria-describedby="inputGroupPrepend1">
+          </div>
+        </div>
+      </div>
+      <portal-dynamic-input (customUrlAdded)="onCustomUrlAdded($event)"></portal-dynamic-input>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        <!--[disabled]="!f.form.valid"-->
+        Save</button>
+      <div *ngIf="error" class="alert alert-danger mt-3" role="alert">
+        <strong>Oops!</strong> {{error}}
+      </div>
+      </form>
+    </div>
+  </div>
+</div>

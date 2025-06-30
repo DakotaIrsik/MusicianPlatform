@@ -1,0 +1,224 @@
+2020-02-07 12:08:17.696 -05:00 [ERR] An exception occured while Creating cmgis Login on Server.
+System.Data.SqlClient.SqlException (0x80131904): The server principal 'IIS APPPOOL\cmgis' already exists.
+Changed database context to 'master'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateServerLogin[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 208
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15025,State:2,Class:16
+2020-02-07 12:08:17.899 -05:00 [ERR] An exception occured while Creating cmgisadmin Login on Server.
+System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group 'IIS APPPOOL\cmgisadmin' not found. Check the name again.
+Changed database context to 'master'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateServerLogin[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 208
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15401,State:1,Class:16
+2020-02-07 12:08:17.932 -05:00 [ERR] An exception occured while Creating cmgis Login on Database: IdentityServer.
+System.Data.SqlClient.SqlException (0x80131904): User, group, or role 'IIS APPPOOL\cmgis' already exists in the current database.
+Changed database context to 'IdentityServer'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateDbLogin[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 220
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15023,State:1,Class:16
+2020-02-07 12:08:17.960 -05:00 [ERR] An exception occured while Creating cmgisadmin Login on Database: IdentityServer.
+System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group 'IIS APPPOOL\cmgisadmin' not found. Check the name again.
+Changed database context to 'IdentityServer'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateDbLogin[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 220
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15401,State:1,Class:16
+2020-02-07 12:08:18.080 -05:00 [ERR] An exception occured while adding reader permission to cmgisadmin.
+System.Data.SqlClient.SqlException (0x80131904): User or role 'IIS APPPOOL\cmgisadmin' does not exist in this database.
+Changed database context to 'IdentityServer'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateDbPermission[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, String permission, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 232
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15410,State:1,Class:11
+2020-02-07 12:08:18.143 -05:00 [ERR] An exception occured while adding writer permission to cmgisadmin.
+System.Data.SqlClient.SqlException (0x80131904): User or role 'IIS APPPOOL\cmgisadmin' does not exist in this database.
+Changed database context to 'IdentityServer'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateDbPermission[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, String permission, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 232
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15410,State:1,Class:11
+2020-02-07 12:08:18.182 -05:00 [ERR] An exception occured while Creating IdentityServer Login on Server.
+System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group 'IIS APPPOOL\IdentityServer' not found. Check the name again.
+Changed database context to 'master'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateServerLogin[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 208
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15401,State:1,Class:16
+2020-02-07 12:08:18.217 -05:00 [ERR] An exception occured while Creating AdminIdentityServer Login on Server.
+System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group 'IIS APPPOOL\AdminIdentityServer' not found. Check the name again.
+Changed database context to 'master'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateServerLogin[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 208
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15401,State:1,Class:16
+2020-02-07 12:08:18.337 -05:00 [ERR] An exception occured while Creating IdentityServer Login on Database: IdentityServer.
+System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group 'IIS APPPOOL\IdentityServer' not found. Check the name again.
+Changed database context to 'IdentityServer'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateDbLogin[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 220
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15401,State:1,Class:16
+2020-02-07 12:08:18.404 -05:00 [ERR] An exception occured while Creating AdminIdentityServer Login on Database: IdentityServer.
+System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group 'IIS APPPOOL\AdminIdentityServer' not found. Check the name again.
+Changed database context to 'IdentityServer'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateDbLogin[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 220
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15401,State:1,Class:16
+2020-02-07 12:08:18.451 -05:00 [ERR] An exception occured while adding reader permission to IdentityServer.
+System.Data.SqlClient.SqlException (0x80131904): User or role 'IIS APPPOOL\IdentityServer' does not exist in this database.
+Changed database context to 'IdentityServer'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateDbPermission[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, String permission, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 232
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15410,State:1,Class:11
+2020-02-07 12:08:18.495 -05:00 [ERR] An exception occured while adding writer permission to IdentityServer.
+System.Data.SqlClient.SqlException (0x80131904): User or role 'IIS APPPOOL\IdentityServer' does not exist in this database.
+Changed database context to 'IdentityServer'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateDbPermission[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, String permission, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 232
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15410,State:1,Class:11
+2020-02-07 12:08:18.539 -05:00 [ERR] An exception occured while adding reader permission to AdminIdentityServer.
+System.Data.SqlClient.SqlException (0x80131904): User or role 'IIS APPPOOL\AdminIdentityServer' does not exist in this database.
+Changed database context to 'IdentityServer'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateDbPermission[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, String permission, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 232
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15410,State:1,Class:11
+2020-02-07 12:08:18.585 -05:00 [ERR] An exception occured while adding writer permission to AdminIdentityServer.
+System.Data.SqlClient.SqlException (0x80131904): User or role 'IIS APPPOOL\AdminIdentityServer' does not exist in this database.
+Changed database context to 'IdentityServer'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlCommandAsync(DatabaseFacade databaseFacade, RawSqlString sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at CelestialMediaGroup.Admin.Helpers.DbMigrationHelpers.CreateDbPermission[TIdentityServerDbContext](TIdentityServerDbContext context, String applicationPoolName, String permission, ILogger logger) in C:\Fast Data\Code\CelestialMediaGroup\IdentityServer\src\CelestialMediaGroup.Admin\Helpers\DbMigrationHelpers.cs:line 232
+ClientConnectionId:44e15985-8405-4822-9506-d71a383e4a59
+Error Number:15410,State:1,Class:11

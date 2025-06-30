@@ -1,0 +1,23 @@
+<div class="content-view-md">
+  <div class="form-group row">
+    <input type="text" id="searchBox" name="searchBox"
+      placeholder="Search for equipment, locations, amenities, anything!" class="form-control" #smartSearchInput />
+  </div>
+  <div id="search-results" class="text-center">
+    <ng-scrollbar class="lg" #searchResultScrollBar>
+      <div class="col-lg-12">
+        <div class="card-deck">
+          <div id="center" style="position:fixed;top:50%;left:50%">
+            <studio-portal-spinner [spinnerName]="'newtonsCradle'"></studio-portal-spinner>
+          </div>
+          <div class="col-lg-4" *ngFor='let studio of studios | paginate: { itemsPerPage: 9, currentPage: page }'>
+            <studio-portal-studio-card [studio]='studio'></studio-portal-studio-card>
+          </div>
+        </div>
+      </div>
+    </ng-scrollbar>
+  </div>
+  <div class="text-center row align-items-end" style="padding-top: 10px;">
+    <pagination-controls class='pagination-controls' (pageChange)="pageChange($event)"></pagination-controls>
+  </div>
+</div>

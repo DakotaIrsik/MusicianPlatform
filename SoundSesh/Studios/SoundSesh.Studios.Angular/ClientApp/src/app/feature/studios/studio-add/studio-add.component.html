@@ -1,0 +1,44 @@
+<div id="studioAdd" class="row justify-content-center">
+  <div class="col-md-9 text-center">
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+      <h1 class="h3 mb-3 font-weight-normal"></h1>
+      <div class="form-group">
+        <div class="col-md-6 offset-md-3">
+          <label for="name" class="sr-only text-center">Enter the name of your Studio</label>
+          <input type="text" id="name" name="name" [(ngModel)]="studio.name" class="form-control"
+            placeholder="Studio name" required autoFocus>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <studio-portal-select [api]='"state"' [key]='"state"' [selectedValues]='studio.state'
+              [placeholder]='"Select your State"'></studio-portal-select>
+            <studio-portal-spinner [spinnerName]="'newtonsCradle'"></studio-portal-spinner>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <studio-portal-city-select [api]='"city"' [key]='"city"' [selectedValues]='studio.city'
+              [placeholder]='"Select your City"'></studio-portal-city-select>
+            <studio-portal-spinner [spinnerName]="'newtonsCradle'"></studio-portal-spinner>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <studio-portal-select [api]='"skilllevel"' [key]='"skilllevel"' [selectedValues]='studio.skilllevel'
+              [placeholder]='"Select your Skill Level"'></studio-portal-select>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-lg btn-primary" type="submit" [disabled]="!f.form.valid">Create Studio</button>
+      <div *ngFor="let error of errors">
+        <label>{{error}}</label><br />
+      </div>
+    </form>
+  </div>
+</div>

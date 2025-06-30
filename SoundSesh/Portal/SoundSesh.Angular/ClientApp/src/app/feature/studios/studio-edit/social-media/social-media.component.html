@@ -1,0 +1,20 @@
+<div *ngIf='socialMedias'>
+  <div id="socialMedia-edit" class="row justify-content-center">
+    <div class="col-md-9 text-center">
+      <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <div *ngFor="let socialMedia of socialMedias">
+            <studio-portal-social-media-input [name]='socialMedia.name' [url]='getUrl(socialMedia.name)'>
+            </studio-portal-social-media-input>
+          </div>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+          <!--[disabled]="!f.form.valid"-->
+          Save</button>
+        <div *ngIf="error" class="alert alert-danger mt-3" role="alert">
+          <strong>Oops!</strong> {{error}}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

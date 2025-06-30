@@ -1,0 +1,27 @@
+{
+  "name": "client-app",
+  "version": "0.0.0",
+  "requires": true,
+  "lockfileVersion": 1,
+  "scripts": {
+    "test-is-admin": "testcafe chrome:headless Scripts/Identity_Server_Admin.js -S -s Artifacts/Screenshots -r html:Artifacts/Reports/Report.html",
+    "test-studio-portal": "testcafe chrome:headless Scripts/Studio_Portal.js -S -s Artifacts/Screenshots -r html:Artifacts/Reports/Report.html"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.17",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "ffmpeg": "0.0.4",
+    "generator-testcafe-reporter": "^2.2.0",
+    "rxjs": "~6.4.0",
+    "testcafe-reporter-html": "^1.4.4",
+    "tslib": "^1.9.0",
+    "zone.js": "~0.9.1",
+    "minimatch": "^3.0.2",
+    "lodash": "^4.17.11",
+    "braces": "^2.3.1"
+  },
+  "devDependencies": {
+    "testcafe": "^1.2.0"
+  }
+}

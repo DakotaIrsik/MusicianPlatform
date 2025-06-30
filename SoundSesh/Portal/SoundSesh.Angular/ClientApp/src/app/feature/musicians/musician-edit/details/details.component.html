@@ -1,0 +1,37 @@
+<div *ngIf='musician'>
+  <div id="musicianEdit" class="row justify-content-center">
+    <div class="col-md-9 text-center">
+      <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <h1 class="h3 mb-3 font-weight-normal"></h1>
+        <div class="form-group">
+          <studio-portal-select [api]='"genre"' [key]='"genre"' [selectedValues]='musician.genres' [multiple]='true'
+            [placeholder]='"Select your Genres"'>
+          </studio-portal-select>
+          <studio-portal-spinner [spinnerName]="'newtonsCradle'"></studio-portal-spinner>
+        </div>
+        <div class="form-group">
+
+          <studio-portal-select [api]='"craft"' [key]='"craft"' [selectedValues]='musician.crafts' [multiple]='true'
+            [placeholder]='"Select your Crafts"'>
+          </studio-portal-select>
+          <studio-portal-spinner [spinnerName]="'newtonsCradle'"></studio-portal-spinner>
+        </div>
+        <div class="form-group">
+          <input type="text" id="about" name="about" [(ngModel)]="musician.about" class="form-control"
+            placeholder="About" required autoFocus>
+        </div>
+        <div class="form-group">
+          <textarea type="text" id="discography" name="discography" [(ngModel)]="musician.discography" class="form-control" rows="5" mdbInput></textarea>
+          <label for="discography">Discography</label>
+        </div>
+        <button class="btn btn-lg btn-primary" type="submit">
+          <!--[disabled]="!f.form.valid"-->
+          Save</button>
+
+        <div *ngIf="error" class="alert alert-danger mt-3" role="alert">
+          <strong>Oops!</strong> {{error}}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
